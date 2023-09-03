@@ -1,11 +1,25 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import FetchingData from './components/fetchingData'
+// import FetchingData from './components/fetchingData'
 
 function App() {
   const [count, setCount] = useState(0)
+const [allDepartments, setAllDepartments] = useState([])
+
+  useEffect(() => {
+    fetch(
+      "https://collectionapi.metmuseum.org/public/collection/v1/departments"
+    ).then((r) =>
+      r
+        .json()
+        // .then(setAllDepartments(r))
+        .then(console.log)
+        .catch((err) => console.log(err))
+    ),
+      [];
+  });
 
   return (
     <>
@@ -25,7 +39,7 @@ function App() {
         </button>
      </div>
      <div>
-      <FetchingData />
+      (setAllDepartments)
      </div>
     </>
   )

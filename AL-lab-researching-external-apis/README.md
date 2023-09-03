@@ -27,35 +27,52 @@ Next, describe your application idea. Your application idea should be simple and
 
 Write 3 - 5 user stories for your application. Include each below.
 
-> 1. As a user ... I can see a department name
+> 1. As a user ... I can see a department's name
 
-> 1. As a user ... I can see a department Id
+> 1. As a user ... I can see a department's Id
 
-> 1. As a user ... 
+> 1. As a user ... I can see how many departments exist
 
 What data is needed to complete your application? Describe the data below and provide a link in the documentation showing where to get this data.
 
-> The data I need for my app is ...
+> The data I need for my app is ... found below 
+>https://metmuseum.github.io/#departments 
 
 Determine the number of free requests you can make to the API. Include a link in the documentation showing where you found this limit, if possible.
 
-> The number of free requests I can make is...
+> The number of free requests I can make is... 80 requests per second.
+>https://metmuseum.github.io/#departments:~:text=80%20requests%20per-,second,-. 
 
 Would the number of free requests you can make to the API be sufficient for you to develop a basic version of the application within a week? Why or why not?
 
-> Your explanation here.
+> Potentially, yes. If I map my plan and plan my map, being meticulous and aware of my use when fetching. Luckily, I learned how to utilize useEffect and also stop the server.  
+
 
 Does working with the API require the use of a credit card? If possible, include a link in the documentation showing where you found this requirement.
 
-> A credit card is...
+> A credit card is... not required
 
 Write one GET request to your chosen API with Postman. This may involve requesting an API key or other steps. If you requested an API Key, **don't include it.** Instead, replace that part of the URL WITH `<MY API KEY>.`
 
-> Requested URL
+> I did not use postman. Instead, I fetched all departments in App.jsx 
 
 Include a snippet of the data you received from the above request.
 
 ```
+departments: Array(19)
+0: 
+departmentId: 1
+displayName: "American Decorative Arts"
+[[Prototype]]: Object
+
+1: {departmentId: 3, displayName: 'Ancient Near Eastern Art'}
+2: {departmentId: 4, displayName: 'Arms and Armor'}
+3: {departmentId: 5, displayName: 'Arts of Africa, Oceania, and the Americas'}
+
+4: 
+departmentId: 6
+displayName: "Asian Art"
+[[Prototype]]: Object
 
 ```
 
@@ -63,8 +80,8 @@ Include a snippet of the data you received from the above request.
 
 What file do you need to store an API key safely?
 
-> The filename is typically ...
+> The filename is typically  .env meaning enviornmental variable 
 
 Why do you want to place that file within the `.gitignore` file?
 
-> Your answer here...
+> You don't want others having access to this information so you would typically store it in a .gitignore - thus keeping the information secure online but still accessible on your local environment. 
